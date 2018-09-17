@@ -11,9 +11,11 @@
         <link rel="shortcut icon" href="lib/favicon/favicon.ico">
         
         <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/extra.css">
+        
         <link rel="stylesheet" href="css/theme/black.css">
-        <link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+		<link rel="stylesheet" href="css/extra.css">
         
         <script src="lib/js/head.min.js"></script>
 
@@ -29,26 +31,29 @@
 
 
                 <section>
-                    <h1>Ten 
+                    <h1>Ten(ish)
 						<img src="svg/svg-logo.svg" alt="svg" style="width: 1.6em; background: transparent;	display: inline-block;border: none;margin: 0 0 -.1em 0;" />
 						Gotchas</h1>
-					<p>Or mistakes I made learning SVG</p>
+					<p>Learning Scalable Vector Graphics</p>
+
+					<div style="margin-top: 3em;">
+						Sam Ellis @ <img src="svg/fenders.svg" alt="fenders" style="border: 0; background: transparent; width: 4em;margin: 0 0 -.2em .4em;" />
+					</div>
 
 				</section>
 
 
 				<section>
-					<h2>Hello,<br>
-						I'm Sam</h2>
+					<h2>Hello</h2>
 					
-					<p>
+					<p style="margin-top: 3em;">
 						<a class="sprite twitter" href="https://twitter.com/elliz">@elliz</a><br>
 						<a class="sprite codepen" href="https://codepen.io/elliz">codepen.io/elliz</a>
-				</p>
+					</p>
 
 				</section>
 				
-				<section data-background="img/perth-monger.jpg">
+				<section data-background-opacity=".5" data-background="img/perth-monger.jpg">
 					<ul>
 						<li class="fragment">Legacy</li>
 						<li class="fragment">DevOps</li>
@@ -59,41 +64,97 @@
 					<h2>Isle of Wight</h2>
 					<ul>
 						<li class="fragment">Started in web</li>
-						<li class="fragment">Jacob Nielsen</li>
-						<li class="fragment">14kb HTML</li>
-						<li class="fragment">Backend systems</li>
-						<li class="fragment">Opportunity</li>
+						<li class="fragment">Performance - 14kb HTML</li>
+						<li class="fragment">Backend</li>
+						<li class="fragment">~2014 SVG Support Yay!</li>
+						<li class="fragment">~2016 New Job</li>
 					</ul>
 				</section>
 
 
-				<section data-background-color="#fff" data-background="img/dnaLight.jpg">
-					<h2>Old Background</h2>
+				<section data-background-opacity="0.6" data-background-color="#fff" data-background="img/dnaLight.jpg">
+					<h2>Old JPG</h2>
 					<ul>
-						<li class="fragment">jpg 
-							<span class="fragment">Originally ~100kb</span></li>
-						<li class="fragment">jpg
-							<span class="fragment">Optimized ~50kb</span>
-						</li>
+						<li class="fragment">Original ~100kb</li>
+						<li class="fragment">Optimized ~50kb</li>
+						<li class="fragment">Can SVG do better?</li>
 					</ul>
 				</section>
 
-				<section data-background="svg/cols-20-80.svg" data-background-color="rgb(136, 36, 31)">
-					<div class="columns">
-						<h2 class="gotcha">Gotcha</h2>
-						<div>
-							<h2>path d="m5 6q2 3wtf???"</h2>
-						</div>
+
+				<section data-background-color="rgb(136, 36, 31)">
+
+					<h2>Gotcha</h2>
+									
+					<div data-markdown class="fragment">
+						<textarea data-template>
+							```html
+							<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 15 100 90'>
+								<path d='M100 24.4C55.42 50.22 59.33 112.1 0 56.6v9.17c17.94 14.7 36.24 18.38 48.78 11.56 12.55-6.83 31.9-32.38 51.22-41.8z'/>
+							</svg>
+							```
+						</textarea>
 					</div>
+
+					<p class="fragment">WAT !?</p>
+
+				</section>
+
+
+				<section>
+					<h2>Learn</h2>
+
+					<ul>
+						<li class="fragment">MDN Web Docs - SVG Tutorial</li>
+						<li class="fragment">Sara Soueidan - Guru</li>
+						<li class="fragment">Chris Coyier - CSS Tricks</li>
+						<li class="fragment">Many more ...</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>SVG 101</h2>
+					<blockquote class="fragment" cite="https://developer.mozilla.org/en-US/docs/Web/SVG">
+						Scalable Vector Graphics (SVG) is an XML-based markup language 
+						for describing two dimensional based vector graphics.
+						<br><br>
+						SVG is essentially to graphics what HTML is to text.
+					</blockquote>
+				
+				</section>
+
+
+				<section>			
+					<div data-markdown>
+						<textarea data-template>
+							```html
+							<svg 
+								xmlns='http://www.w3.org/2000/svg' 
+								width='100' height='100'
+								viewBox='0 0 100 100'>
+
+								<rect x="0" y="0" width="100" height="100" ... />
+								<circle ... /> <ellipse ... />
+								<polyline ... /> <polygon ... />
+								<path d='M100 24.4C55.42 50.22 59.33 112.1 0 ... z'/>
+							</svg>
+							```
+						</textarea>
+					</div>
+				</section>
+
+
+				<section data-background-opacity="0.6" data-background-color="#fff" data-background="img/dnaLight.jpg">
+					<h2>Old JPG</h2>
+					<p>~50kb</p>
 				</section>
 
 				<section data-background-color="#fff" data-background="svg/sse-swooshes.svg">
 
-					<h2>New Background</h2>
+					<h2>New SVG Background</h2>
 					<ul>
-						<li class="fragment">svg 
-							<span class="fragment">~2.7kb</span></li>
-						<li class="fragment">gzip ~.9kb</span></li>
+						<li class="fragment">~2.7kb</li>
+						<li class="fragment">~.9kb gzip</span></li>
 					</ul>
 						
 				</section>
@@ -132,104 +193,253 @@
 					</textarea>
 				</section>
 
-				<section data-background="svg/cols-20-80.svg" data-background-color="rgb(136, 36, 31)">
-					<div class="columns">
-						<h2 class="gotcha">Gotcha</h2>
-						<div>
-							<h2>blend-modes</h2>
-						</div>
-					</div>
+				<section data-background-color="rgb(136, 36, 31)">
+					<h2 class="gotcha">Gotcha</h2>
+					<h3>Browser support</h3>
+					<p>mix-blend-mode: multiply</p>
 				</section>
 				
 
-
-
-                <section data-background="svg/cols-20-80.svg" data-background-color="rgb(136, 36, 31)">
-					<div class="columns">
-						<h2 class="gotcha">Gotcha</h2>
-						<div>
-							<h2>CSS Animation in IE</h2>
-						</div>
-					</div>
+				<section>
+					<h2 class="gotcha">mix-blend-mode</h2>
+					<img src="img/mix-blend-mode.png" alt="caniuse.com support matrix for mix-blend-mode" />
 				</section>
-				
-				<section data-background="svg/cols-20-80.svg" data-background-color="rgb(136, 36, 31)">
-					<div class="columns">
-						<h2 class="gotcha">Gotcha</h2>
-						<div>
-							<h2>Square Circles</h2>
-						</div>
-					</div>
-				</section>
-				
-				<section data-background="svg/cols-20-80.svg" data-background-color="rgb(136, 36, 31)">
-					<div class="columns">
-						<h2 class="gotcha">Gotcha</h2>
-						<div>
-							<h2>Horizontal and Vertical Handles</h2>
-						</div>
-					</div>
-				</section>
-				
 
-				<section data-background="svg/cols-20-80.svg" data-background-color="rgb(136, 36, 31)">
+				<section>
 					<div class="columns">
-						<h2 class="gotcha">Gotcha</h2>
 						<div>
-							<h2>Editor Cruft</h2>
+							<p>Chrome et al</p>
+							<svg viewbox="0 0 120 80" width="100%">
+								<rect width="120" height="100" fill="#FFF" />
+								<circle cx="40" cy="40" r="30" fill="tomato" style="mix-blend-mode: multiply;" />
+								<circle cx="80" cy="40" r="30" fill="blue" style="mix-blend-mode: multiply;" />
+							</svg>
+						</div>
+
+						<div class="fragment">
+							<p>IE</p>
+							<svg viewbox="0 0 120 80" width="100%">
+								<g>
+									<rect width="120" height="100" fill="#FFF" />
+									<circle cx="40" cy="40" r="30" fill="tomato" />
+									<circle cx="80" cy="40" r="30" fill="blue" />
+								</g>
+								<g class="fragment">
+									<rect width="120" height="100" fill="#FFF" />
+									<path fill="tomato" d="M 40 10 A 30 30 0 0 0 10 40 A 30 30 0 0 0 40 70 A 30 30 0 0 0 60 62.3125 L 60 17.681641 A 30 30 0 0 0 40 10 z " />
+									<path class="fragment" fill="blue" d="M 80 10 A 30 30 0 0 0 60 17.6875 L 60 62.318359 A 30 30 0 0 0 80 70 A 30 30 0 0 0 110 40 A 30 30 0 0 0 80 10 z "/>
+									<path class="fragment" fill="navy" d="M 60.001953 17.685547 A 30 30 0 0 0 50 40 A 30 30 0 0 0 59.998047 62.314453 A 30 30 0 0 0 70 40 A 30 30 0 0 0 60.001953 17.685547 z " />
+								</g>
+							</svg>
 						</div>
 					</div>
 				</section>
 
-				<section data-background="svg/cols-20-80.svg" data-background-color="rgb(136, 36, 31)">
+				<section data-background-color="rgb(136, 36, 31)">
+					<h2>Gotcha</h2>
+					<h3>Retina vs Standard Resolution</h3>
 					<div class="columns">
-						<h2 class="gotcha">Gotcha</h2>
-						<div>
-							<h2>Gradients</h2>
-						</div>
+						<svg viewbox="0 0 120 80" width="100%">
+							<g class="fragment">
+								<rect width="120" height="100" fill="#FFF" />
+								<path class="fragment" fill="tomato" d="M 40,10 C 23.431458,10 10,23.431458 10,40 10,56.568542 23.431458,70 40,70 47.384742,69.986813 54.505168,67.250328 59.998047,62.314453 53.647757,56.6336 50.012641,48.520453 50,40 50.013636,31.478939 53.650215,23.365696 60.001953,17.685547 54.508071,12.748775 47.386089,10.012225 40,10 Z m 20.001953,7.685547 -0.0039,44.628906 z" />
+								<path class="fragment" fill="blue" d="m 59.998047,62.314453 0.0039,-44.628906 z m 0.0039,-44.628906 C 66.352243,23.3664 69.987359,31.479547 70,40 69.986364,48.521061 66.349785,56.634304 59.998047,62.314453 65.491929,67.251225 72.613911,69.987775 80,70 96.568542,70 110,56.568542 110,40 110,23.431458 96.568542,10 80,10 c -7.384742,0.01319 -14.505168,2.749672 -19.998047,7.685547 z"/>
+								<path class="fragment" fill="navy" d="M 60.001953 17.685547 A 30 30 0 0 0 50 40 A 30 30 0 0 0 59.998047 62.314453 A 30 30 0 0 0 70 40 A 30 30 0 0 0 60.001953 17.685547 z " />
+							</g>
+						</svg>
+
+						<svg class="fragment" viewbox="0 0 120 80" width="100%">
+							<g>
+								<rect width="120" height="100" fill="#FFF" />
+								<path fill="tomato" transform="translate(-0.1 0)" d="M 39.8,10 C 23.431458,10 10,23.431458 10,40 10,56.568542 23.431458,70 40,70 47.384742,69.986813 54.505168,67.250328 59.998047,62.314453 53.647757,56.6336 50.012641,48.520453 50,40 50.013636,31.478939 53.650215,23.365696 60.001953,17.685547 54.508071,12.748775 47.386089,10.012225 40,10 Z m 20.001953,7.685547 -0.0039,44.628906 z" />
+								<path fill="blue" transform="translate(0.1 0)" d="m 60.1,62.314453 0.0039,-44.628906 z m 0.0039,-44.628906 C 66.352243,23.3664 69.987359,31.479547 70,40 69.986364,48.521061 66.349785,56.634304 59.998047,62.314453 65.491929,67.251225 72.613911,69.987775 80,70 96.568542,70 110,56.568542 110,40 110,23.431458 96.568542,10 80,10 c -7.384742,0.01319 -14.505168,2.749672 -19.998047,7.685547 z"/>
+								<path fill="navy" d="M 60 17.685547 A 30 30 0 0 0 50 40 A 30 30 0 0 0 59.998047 62.314453 A 30 30 0 0 0 70 40 A 30 30 0 0 0 60.001953 17.685547 z " />
+							</g>
+						</svg>
 					</div>
 				</section>
 
-				<section data-background="svg/cols-20-80.svg" data-background-color="rgb(136, 36, 31)">
-					<div class="columns">
-						<h2 class="gotcha">Gotcha</h2>
-						<div>
-							<h2>When NOT to use SVG</h2>
-						</div>
-					</div>
-				</section>
-				
-
-				<section data-background="svg/cols-20-80.svg" data-background-color="rgb(136, 36, 31)">
-					<div class="columns">
-						<h2 class="gotcha">Gotcha</h2>
-						<div>
-							<h2>Mouse Pointer Events</h2>
-						</div>
-					</div>
-                </section>
-
-			  
-				
-				<section data-background="svg/cols-20-80.svg" data-background-color="rgb(136, 36, 31)">
-					<div class="columns">
-						<h2 class="gotcha">Gotcha</h2>
-						<div>
-							<h2>blend-modes</h2>
-						</div>
-					</div>
-                </section>
 
 
 
 				<section>
-				<h2>Thank you</h2>
-
-				<p>
-					<a class="sprite twitter" href="https://twitter.com/elliz">@elliz</a><br>
-					<a class="sprite codepen" href="https://codepen.io/elliz">codepen.io/elliz</a>
-				</p>
+					<h2>What to SVG Next?</h2>
+					<img class="fragment" src="img/sse-loader.gif" alt="loading" width="40%" style="border: 0; background-color: transparent" />
+					<p class="fragment">Washing Machine of Death</p>
 				</section>
+
+				<section>
+					<h2>DEMO</h2>
+					<p>Line animation trick <a href="https://css-tricks.com/svg-line-animation-works/" target="_new">css-tricks</a></p>
+					<p><a href="https://codepen.io/elliz/pen/ZMOyEY?editors=1000" target="_new">Making WMoD pen</a></p>
+				</section>
+
+				<section data-background-color="rgb(136, 36, 31)">
+					<h2>Gotcha</h2>
+					<h3>Animating in IE via CSS ...</h3>
+					<p>... have to use JS</p>
+				</section>
+
+
+				<section>
+					<h2>So ... Lets animate SVG in IE <em>without</em> JS</h2>
+					<p>Think outside the box ...</p>
+				</section>
+
+
+				<section>
+					<h2>This pen</h2>
+
+					<p data-height="350" data-theme-id="0" data-slug-hash="oGvLbY"
+					 data-default-tab="result" data-user="elliz" 
+					 data-pen-title="Cross browser SVG Please wait button ideas" 
+					 class="codepen">See the Pen <a href="https://codepen.io/elliz/pen/oGvLbY/">Cross browser SVG Please wait button ideas</a> by Ruskinz (<a href="https://codepen.io/elliz">@elliz</a>) 
+						on <a href="https://codepen.io">CodePen</a>.</p>
+				</section>
+
+				<section>
+					<h2>This pen</h2>
+					<p style="min-height: 350px" data-height="350" data-theme-id="0" data-slug-hash="PdQGPL" 
+					data-default-tab="html,result" data-user="elliz" 
+					data-pen-title="SVG Loading graphic" 
+					class="codepen">See the Pen 
+					<a href="https://codepen.io/elliz/pen/PdQGPL/">SVG Loading graphic</a>
+					 by Ruskinz (<a href="https://codepen.io/elliz">@elliz</a>) 
+					 on <a href="https://codepen.io">CodePen</a>.</p>
+				</section>
+
+
+
+				<section data-background-color="rgb(136, 36, 31)">
+					<h2>Gotcha</h2>
+					<h3>Square Circles</h3>
+					<p>Solutions:</p>
+					<ul>
+						<li class="fragment">edges hidden (padding or overflow:visible)</li>
+						<li class="fragment">Browser rendering (move 1/2 pixel in)</li>
+					</ul>
+				</section>
+
+				<section data-background-color="rgb(136, 36, 31)">
+					<h2>Gotcha</h2>
+					<h3>Horizontal and Vertical Handles</h3>
+					<img src="img/bezier.gif" alt="bezier curves" class="fragment" />
+				</section>
+
+				<section data-background-color="rgb(136, 36, 31)">
+					<h2>Gotcha</h2>
+					<h3>Editor Cruft</h3>
+					<p>Demo - Inkscape</p>
+				</section>
+
+				<section data-background-color="rgb(136, 36, 31)">
+					<h2>Gotcha</h2>
+					<h3 class="fragment">Gradients</h3>
+					<p data-height="300" data-theme-id="0" 
+					data-slug-hash="OojGvg" data-default-tab="result" 
+					data-user="elliz" data-pen-title="SVG Gradient Experiments" 
+					class="codepen">
+					See the Pen <a href="https://codepen.io/elliz/pen/OojGvg/">SVG Gradient Experiments</a> 
+					by Ruskinz (<a href="https://codepen.io/elliz">@elliz</a>) on 
+					<a href="https://codepen.io">CodePen</a>.</p>
+				</section>
+
+				<section data-markdown data-background="svg/fenders-optimized.svg">
+					
+					<div class="fragment">
+						<textarea data-template>
+						```html
+						<svg viewBox="0 0 257.92 74.06" xmlns="http://www.w3.org/2000/svg">
+							
+							<linearGradient id="a" gradientUnits="userSpaceOnUse" 
+							   x1="14.31" x2="43.41" y1="37.83" y2="64.63">
+								<stop offset="0" stop-color="#4bb483"/>
+								<stop offset="1" stop-color="#44c1f0"/>
+							</linearGradient>
+						  
+							...
+
+						  </svg>
+						```
+					</textarea>
+					</div>
+				</section>
+
+				<section data-markdown data-background="svg/fenders-optimized.svg">
+					
+					<div class="fragment">
+						<textarea data-template>
+						```html
+						<svg viewBox="0 0 257.92 74.06" xmlns="http://www.w3.org/2000/svg">
+							
+							<linearGradient id="a" y2="1">
+							  <stop offset=".4" stop-color="#4bb483"/>
+							  <stop offset="1" stop-color="#44c1f0"/>
+							</linearGradient>
+						  
+							...
+									  
+						  </svg>
+						```
+					</textarea>
+					</div>
+				</section>
+
+
+
+				<section data-background-color="rgb(136, 36, 31)">
+					<h2>Gotcha</h2>
+					<h3 class="fragment">SVG 2</h3>
+					<p class="fragment">W3C Candidate Recommendation - 7 Aug 2018</p>
+				</section>
+
+
+				<section >
+						<h2>SVG 2</h2>
+						<ul>
+							<li class="fragment">xlink:href => href</li>
+							<li class="fragment">Mesh gradients</li>
+							<li class="fragment">Hatches</li>
+							<li class="fragment">paint-order (cool text)</li>
+							<li class="fragment">More attributes via CSS</li>
+							<li class="fragment">stroke-linejoin</li>
+							<li class="fragment">...</li>
+						</ul>
+	
+					</section>
+
+
+				<section data-background-color="rgb(136, 36, 31)">
+					<h2>Gotcha</h2>
+					<h3 class="fragment">Communication</h3>
+					<p class="fragment">Talk to your designers, talk to your developers ...</p>
+				</section>
+
+
+				
+				<section data-background-color="rgb(136, 36, 31)">
+						<h2>Bonus</h2>
+						<h3 class="fragment">... If we have time ...</h3>
+						<p class="fragment">url encoding tool ...</p>
+					</section>
+
+
+				<section>
+					<h2>Thank you</h2>
+
+					<p style="margin-top: 3em;">
+						<a class="sprite twitter" href="https://twitter.com/elliz">@elliz</a><br>
+						<a class="sprite codepen" href="https://codepen.io/elliz">codepen.io/elliz</a>
+					</p>
+				</section>
+
+
+
+
+
+
+
+
 
 
             </div>
@@ -260,6 +470,8 @@
                 ]
             });
 		</script>
+
+		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 	</body>
 </html>
